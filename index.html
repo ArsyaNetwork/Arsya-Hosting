@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hosting Minecraft • Cepat, Stabil, Anti-Lag</title>
+  <meta name="description" content="Hosting server Minecraft cepat dan stabil. Panel mudah, DDoS protection, instant setup, dan support ramah 24/7." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <!-- Tailwind via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { inter: ['Inter', 'ui-sans-serif', 'system-ui'] },
+          colors: {
+            base: {
+              50: '#F8FAFF',
+              100: '#EEF2FF',
+              200: '#E0E7FF',
+              300: '#C7D2FE',
+              400: '#A5B4FC',
+              500: '#818CF8',
+              600: '#6366F1',
+              700: '#4F46E5',
+              800: '#4338CA',
+              900: '#312E81',
+            },
+            brand: {
+              DEFAULT: '#6D5EF4',
+              600: '#5C4EF0',
+              700: '#4E42E0',
+              800: '#3B33B8'
+            },
+            night: {
+              900: '#0B0C14',
+              800: '#111225',
+              700: '#151633',
+              600: '#1D1E3F'
+            }
+          },
+          boxShadow: {
+            soft: '0 10px 30px rgba(0,0,0,.25)',
+            glow: '0 0 0 1px rgba(109,94,244,.5), 0 12px 40px rgba(109,94,244,.35)'
+          },
+          backgroundImage: {
+            grid: 'radial-gradient(circle at 1px 1px, rgba(255,255,255,.06) 1px, transparent 0)'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body{font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif}
+    /* Shine / slot effect */
+    .shine{position:relative;overflow:hidden}
+    .shine::after{content:"";position:absolute;inset:-150% -50% auto;transform:rotate(20deg);width:30%;height:300%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.25),transparent);transition:transform .6s ease}
+    .shine:hover::after{transform:translateX(350%) rotate(20deg)}
+    /* Float effect */
+    .float{transition:transform .25s ease, box-shadow .25s ease}
+    .float:hover{transform:translateY(-6px) scale(1.01); box-shadow:0 16px 40px rgba(0,0,0,.35)}
+    /* Glass */
+    .glass{backdrop-filter: blur(12px); background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02))}
+    /* Simple container max width */
+    .wrap{max-width:1200px}
+  </style>
+</head>
+<body class="bg-night-900 text-white">
+  <!-- Top bar -->
+  <div class="text-xs bg-night-800/70 border-b border-white/10">
+    <div class="mx-auto wrap px-4 py-2 flex items-center justify-between">
+      <div class="flex items-center gap-3 opacity-80">
+        <span class="inline-flex items-center gap-2"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" class="opacity-80"><path d="M12 22s8-4 8-10V6l-8-4-8 4v6c0 6 8 10 8 10Z" stroke="currentColor" stroke-width="1.5"/></svg> Hosting Murah </span>
+        <span class="hidden sm:inline">•</span>
+        <span class="hidden sm:inline">Uptime 99.9%</span>
+      </div>
+      <a href="#pricing" class="text-xs font-semibold px-3 py-1 rounded-lg bg-brand hover:bg-brand-600 transition">Mulai dari Rp10.000</a>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <header class="relative overflow-hidden">
+    <div class="absolute inset-0 -z-10">
+      <div class="absolute inset-0 bg-gradient-to-b from-night-800 via-night-900 to-night-900"></div>
+      <div class="absolute inset-0 bg-grid bg-[length:22px_22px]"></div>
+      <div class="absolute -top-40 -right-40 w-[640px] h-[640px] rounded-full blur-3xl opacity-30" style="background:radial-gradient(closest-side,#6D5EF4,transparent)"></div>
+    </div>
+
+    <nav class="mx-auto wrap px-4 py-5 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-xl bg-brand/20 border border-brand/40 grid place-content-center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 7h18M6 12h12M9 17h6" stroke="#A5B4FC" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+        <span class="font-extrabold tracking-tight text-white/90">Arsya Hosting</span>
+      </div>
+      <div class="hidden md:flex items-center gap-8 text-white/80">
+        <a href="#fitur" class="hover:text-white">Fitur</a>
+        <a href="#pricing" class="hover:text-white">Paket</a>
+        <a href="#faq" class="hover:text-white">FAQ</a>
+        <a href="#kontak" class="hover:text-white">Kontak</a>
+        <a href="https://wa.me/6281263130957?text=Halo%20kak%2C%20saya%20mau%20tanya%20hosting%20Minecraft" class="px-4 py-2 rounded-xl bg-brand hover:bg-brand-600 transition font-semibold">Chat WhatsApp</a>
+      </div>
+      <button class="md:hidden px-3 py-2 rounded-lg bg-white/10">Menu</button>
+    </nav>
+
+    <div class="mx-auto wrap px-4 pt-6 pb-16 md:pt-14 md:pb-28 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <div class="inline-flex items-center gap-2 text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/70 mb-4">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          Instant Setup • Panel Mudah • Anti-Lag
+        </div>
+        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
+          Hosting <span class="text-transparent bg-clip-text bg-gradient-to-r from-base-400 via-white to-base-400">Minecraft</span>
+          cepat & stabil.
+        </h1>
+        <p class="text-white/70 mt-4 text-lg md:text-xl max-w-xl">Jalankan dunia SMP, Factions, Lifesteal, atau Modpack tanpa pusing. Server online dalam hitungan menit, performa solid, harga hemat.</p>
+        <div class="mt-6 flex flex-wrap items-center gap-3">
+          <a href="#pricing" class="shine float inline-flex items-center gap-2 px-5 py-3 rounded-2xl bg-brand shadow-glow font-semibold">Lihat Paket</a>
+          <a href="#fitur" class="inline-flex items-center gap-2 px-5 py-3 rounded-2xl bg-white/5 hover:bg-white/10 transition border border-white/10">Jelajahi Fitur</a>
+        </div>
+        <div class="mt-6 flex items-center gap-6 text-xs text-white/60">
+          <div class="flex items-center gap-2"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 12l4 4 12-12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Uptime 99.9%</div>
+          <div class="flex items-center gap-2"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v6l4 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>Support 24/7</div>
+          <div class="flex items-center gap-2"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M3 12h18M12 3v18" stroke="currentColor" stroke-width="1.6"/></svg>Panel Pterodactyl</div>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="glass rounded-3xl p-4 md:p-6 border border-white/10 shadow-soft">
+          <img src="https://cdn.pixabay.com/photo/2018/05/23/13/29/network-3424070_640.jpg" alt="Minecraft server" class="rounded-2xl w-full h-64 md:h-96 object-cover"/>
+        </div>
+        <div class="absolute -bottom-6 -right-4 md:-right-10 bg-brand/20 border border-brand/40 text-xs rounded-2xl p-3 backdrop-blur">
+          <div class="font-bold">Ping <span class="text-emerald-300">rendah</span></div>
+          <div class="text-white/70">Asia (Jakarta / SG)</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Trust badges -->
+  <section class="mx-auto wrap px-4 py-10 md:py-14">
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+      <div class="glass rounded-xl p-4 border border-white/10 text-center">
+        <div class="text-2xl font-extrabold">12K+</div>
+        <div class="text-white/60 text-sm">Player dilayani</div>
+      </div>
+      <div class="glass rounded-xl p-4 border border-white/10 text-center">
+        <div class="text-2xl font-extrabold">300+</div>
+        <div class="text-white/60 text-sm">Server aktif</div>
+      </div>
+      <div class="glass rounded-xl p-4 border border-white/10 text-center">
+        <div class="text-2xl font-extrabold"><span class="align-top">★</span>4.9</div>
+        <div class="text-white/60 text-sm">Rating pelanggan</div>
+      </div>
+      <div class="glass rounded-xl p-4 border border-white/10 text-center">
+        <div class="text-2xl font-extrabold"><span class="text-emerald-300">✔</span></div>
+        <div class="text-white/60 text-sm">Garansi performa</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fitur -->
+  <section id="fitur" class="mx-auto wrap px-4 py-10 md:py-16">
+    <div class="text-center mb-10">
+      <h2 class="text-3xl md:text-4xl font-extrabold">Semua yang kamu butuhkan</h2>
+      <p class="text-white/70 mt-2">Mulai dari panel gampang, backup otomatis, hingga proteksi DDoS.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-5">
+      <!-- Card -->
+      <div class="shine float rounded-2xl border border-white/10 bg-white/5 p-6">
+        <div class="text-lg font-bold mb-2">Performanya Ngebut</div>
+        <p class="text-white/70 text-sm">CPU generasi baru, NVMe Gen4, RAM DDR5. Optimasi Minecraft siap pakai.</p>
+      </div>
+      <div class="shine float rounded-2xl border border-white/10 bg-white/5 p-6">
+        <div class="text-lg font-bold mb-2">Proteksi & Keamanan</div>
+        <p class="text-white/70 text-sm">DDoS protection, isolasi container, dan monitoring realtime.</p>
+      </div>
+      <div class="shine float rounded-2xl border border-white/10 bg-white/5 p-6">
+        <div class="text-lg font-bold mb-2">Panel Pterodactyl</div>
+        <p class="text-white/70 text-sm">Start/stop, konsol, file manager, SFTP, dan schedule mudah.</p>
+      </div>
+      <div class="shine float rounded-2xl border border-white/10 bg-white/5 p-6">
+        <div class="text-lg font-bold mb-2">Backup Otomatis</div>
+        <p class="text-white/70 text-sm">Jadwalkan backup harian agar dunia aman dari error tak terduga.</p>
+      </div>
+      <div class="shine float rounded-2xl border border-white/10 bg-white/5 p-6">
+        <div class="text-lg font-bold mb-2">Modpack & Addon</div>
+        <p class="text-white/70 text-sm">Dukungan Java & Bedrock, Paper, Purpur, BDS, Modpack populer.</p>
+      </div>
+      <div class="shine float rounded-2xl border border-white/10 bg-white/5 p-6">
+        <div class="text-lg font-bold mb-2">Support 24/7</div>
+        <p class="text-white/70 text-sm">Tim ramah siap bantu via WA/Discord kapan pun dibutuhkan.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing" class="relative">
+    <div class="absolute inset-0 -z-10 bg-gradient-to-b from-night-800/60 to-night-900"></div>
+    <div class="mx-auto wrap px-4 py-12 md:py-16">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl md:text-4xl font-extrabold">Paket Hosting Minecraft</h2>
+        <p class="text-white/70 mt-2">Pilih paket sesuai kebutuhan. Upgrade kapan saja.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+  <!-- Paket 1 -->
+  <div class="shine float rounded-3xl border border-white/10 bg-white/5 p-6 flex flex-col">
+    <div class="text-sm text-white/60 mb-2">PAKET 1</div>
+    <div class="text-3xl font-extrabold">Rp10.000<span class="text-base font-semibold text-white/60">/bln</span></div>
+    <ul class="mt-4 space-y-2 text-white/80 text-sm">
+      <li>RAM 1GB</li>
+      <li>vCPU Shared • NVMe</li>
+      <li>Slot 10 pemain</li>
+      <li>Panel Pterodactyl</li>
+      <li>Backup mingguan</li>
+    </ul>
+    <a href="https://wa.me/6281263130957?text=Halo%2C%20saya%20mau%20order%20PAKET%201" class="mt-6 inline-flex items-center justify-center rounded-xl px-4 py-3 bg-white/10 hover:bg-white/20 border border-white/15">Order via WhatsApp</a>
+  </div>
+
+  <!-- Paket 2 -->
+  <div class="shine float rounded-3xl border-2 border-brand bg-white/10 p-6 shadow-glow relative flex flex-col">
+    <div class="absolute -top-3 right-6 text-xs px-3 py-1 rounded-full bg-brand">Terpopuler</div>
+    <div class="text-sm text-white/80 mb-2">PAKET 2</div>
+    <div class="text-3xl font-extrabold">Rp20.000<span class="text-base font-semibold text-white/60">/bln</span></div>
+    <ul class="mt-4 space-y-2 text-white/90 text-sm">
+      <li>RAM 2GB</li>
+      <li>vCPU High Clock</li>
+      <li>Slot 20-30 pemain</li>
+      <li>Backup harian</li>
+      <li>DDoS protection</li>
+    </ul>
+    <a href="https://wa.me/6281263130957?text=Halo%2C%20saya%20mau%20order%20PAKET%202" class="mt-6 inline-flex items-center justify-center rounded-xl px-4 py-3 bg-brand hover:bg-brand-600 font-semibold shadow-glow">Pilih Paket 2</a>
+  </div>
+
+  <!-- Paket 3 -->
+  <div class="shine float rounded-3xl border border-white/10 bg-white/5 p-6 flex flex-col">
+    <div class="text-sm text-white/60 mb-2">PAKET 3</div>
+    <div class="text-3xl font-extrabold">Rp40.000<span class="text-base font-semibold text-white/60">/bln</span></div>
+    <ul class="mt-4 space-y-2 text-white/80 text-sm">
+      <li>RAM 4GB</li>
+      <li>vCPU Dedicated Slice</li>
+      <li>Slot 50+ pemain</li>
+      <li>Backup harian + offsite</li>
+      <li>Prioritas support</li>
+    </ul>
+    <a href="https://wa.me/6281263130957?text=Halo%2C%20saya%20mau%20order%20PAKET%203" class="mt-6 inline-flex items-center justify-center rounded-xl px-4 py-3 bg-white/10 hover:bg-white/20 border border-white/15">Order via WhatsApp</a>
+  </div>
+
+  <!-- Paket 4 -->
+  <div class="shine float rounded-3xl border border-white/10 bg-white/5 p-6 flex flex-col">
+    <div class="text-sm text-white/60 mb-2">PAKET 4</div>
+    <div class="text-3xl font-extrabold">Rp50.000<span class="text-base font-semibold text-white/60">/bln</span></div>
+    <ul class="mt-4 space-y-2 text-white/80 text-sm">
+      <li>RAM 5GB</li>
+      <li>vCPU Dedicated Slice</li>
+      <li>Slot 60+ pemain</li>
+      <li>Backup harian + offsite</li>
+      <li>Prioritas support</li>
+    </ul>
+    <a href="https://wa.me/6281263130957?text=Halo%2C%20saya%20mau%20order%20PAKET%204" class="mt-6 inline-flex items-center justify-center rounded-xl px-4 py-3 bg-white/10 hover:bg-white/20 border border-white/15">Order via WhatsApp</a>
+  </div>
+
+  <!-- Paket 5 -->
+  <div class="shine float rounded-3xl border border-white/10 bg-white/5 p-6 flex flex-col">
+    <div class="text-sm text-white/60 mb-2">PAKET 5</div>
+    <div class="text-3xl font-extrabold">Rp60.000<span class="text-base font-semibold text-white/60">/bln</span></div>
+    <ul class="mt-4 space-y-2 text-white/80 text-sm">
+      <li>RAM 6GB</li>
+      <li>vCPU Dedicated Slice</li>
+      <li>Slot 70+ pemain</li>
+      <li>Backup harian + offsite</li>
+      <li>Prioritas support</li>
+    </ul>
+    <a href="https://wa.me/6281263130957?text=Halo%2C%20saya%20mau%20order%20PAKET%205" class="mt-6 inline-flex items-center justify-center rounded-xl px-4 py-3 bg-white/10 hover:bg-white/20 border border-white/15">Order via WhatsApp</a>
+  </div>
+
+  <!-- Paket 6 -->
+  <div class="shine float rounded-3xl border border-white/10 bg-white/5 p-6 flex flex-col">
+    <div class="text-sm text-white/60 mb-2">PAKET 6</div>
+    <div class="text-3xl font-extrabold">Rp70.000<span class="text-base font-semibold text-white/60">/bln</span></div>
+    <ul class="mt-4 space-y-2 text-white/80 text-sm">
+      <li>RAM 7GB</li>
+      <li>vCPU Dedicated Slice</li>
+      <li>Slot 80+ pemain</li>
+      <li>Backup harian + offsite</li>
+      <li>Prioritas support</li>
+    </ul>
+    <a href="https://wa.me/6281263130957?text=Halo%2C%20saya%20mau%20order%20PAKET%206" class="mt-6 inline-flex items-center justify-center rounded-xl px-4 py-3 bg-white/10 hover:bg-white/20 border border-white/15">Order via WhatsApp</a>
+  </div>
+
+  <!-- Paket 7 -->
+  <div class="shine float rounded-3xl border border-white/10 bg-white/5 p-6 flex flex-col">
+    <div class="text-sm text-white/60 mb-2">PAKET 7</div>
+    <div class="text-3xl font-extrabold">Rp80.000<span class="text-base font-semibold text-white/60">/bln</span></div>
+    <ul class="mt-4 space-y-2 text-white/80 text-sm">
+      <li>RAM 8GB</li>
+      <li>vCPU Dedicated Slice</li>
+      <li>Slot 90+ pemain</li>
+      <li>Backup harian + offsite</li>
+      <li>Prioritas support</li>
+    </ul>
+    <a href="https://wa.me/6281263130957?text=Halo%2C%20saya%20mau%20order%20PAKET%207" class="mt-6 inline-flex items-center justify-center rounded-xl px-4 py-3 bg-white/10 hover:bg-white/20 border border-white/15">Order via WhatsApp</a>
+  </div>
+
+  <!-- Paket 8 -->
+  <div class="shine float rounded-3xl border border-white/10 bg-white/5 p-6 flex flex-col">
+    <div class="text-sm text-white/60 mb-2">PAKET 8</div>
+    <div class="text-3xl font-extrabold">Rp90.000<span class="text-base font-semibold text-white/60">/bln</span></div>
+    <ul class="mt-4 space-y-2 text-white/80 text-sm">
+      <li>RAM 9GB</li>
+      <li>vCPU Dedicated Slice</li>
+      <li>Slot 100+ pemain</li>
+      <li>Backup harian + offsite</li>
+      <li>Prioritas support</li>
+    </ul>
+    <a href="https://wa.me/6281263130957?text=Halo%2C%20saya%20mau%20order%20PAKET%208" class="mt-6 inline-flex items-center justify-center rounded-xl px-4 py-3 bg-white/10 hover:bg-white/20 border border-white/15">Order via WhatsApp</a>
+  </div>
+
+  <!-- Paket 9 -->
+  <div class="shine float rounded-3xl border border-white/10 bg-white/5 p-6 flex flex-col">
+    <div class="text-sm text-white/60 mb-2">PAKET 9</div>
+    <div class="text-3xl font-extrabold">Rp100.000<span class="text-base font-semibold text-white/60">/bln</span></div>
+    <ul class="mt-4 space-y-2 text-white/80 text-sm">
+      <li>RAM 10GB</li>
+      <li>vCPU Dedicated Slice</li>
+      <li>Slot 110+ pemain</li>
+      <li>Backup harian + offsite</li>
+      <li>Prioritas support</li>
+    </ul>
+    <a href="https://wa.me/6281263130957?text=Halo%2C%20saya%20mau%20order%20PAKET%209" class="mt-6 inline-flex items-center justify-center rounded-xl px-4 py-3 bg-white/10 hover:bg-white/20 border border-white/15">Order via WhatsApp</a>
+  </div>
+
+  <!-- Paket 10 -->
+  <div class="shine float rounded-3xl border border-white/10 bg-white/5 p-6 flex flex-col">
+    <div class="text-sm text-white/60 mb-2">PAKET 10</div>
+    <div class="text-3xl font-extrabold">Rp110.000<span class="text-base font-semibold text-white/60">/bln</span></div>
+    <ul class="mt-4 space-y-2 text-white/80 text-sm">
+      <li>RAM 12GB</li>
+      <li>vCPU Dedicated Slice</li>
+      <li>Slot 120+ pemain</li>
+      <li>Backup harian + offsite</li>
+      <li>Prioritas support</li>
+    </ul>
+    <a href="https://wa.me/6281263130957?text=Halo%2C%20saya%20mau%20order%20PAKET%2010" class="mt-6 inline-flex items-center justify-center rounded-xl px-4 py-3 bg-white/10 hover:bg-white/20 border border-white/15">Order via WhatsApp</a>
+  </div>
+</div>
+
+      <!-- Tambahan -->
+      <div class="mt-10 grid md:grid-cols-3 gap-4 text-sm">
+        <div class="glass rounded-2xl p-4 border border-white/10"><span class="font-semibold">Add-on:</span> Dedicated IP, Subdomain gratis, Snapshot, SFTP.</div>
+        <div class="glass rounded-2xl p-4 border border-white/10"><span class="font-semibold">Modpack:</span> Paper/Purpur, BDS, Forge/Fabric, Geyser, Floodgate.</div>
+        <div class="glass rounded-2xl p-4 border border-white/10"><span class="font-semibold">Cocok untuk:</span> SMP, Lifesteal, Factions, Skyblock, Minigames.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials / CTA -->
+  <section class="mx-auto wrap px-4 py-12 md:py-16">
+      <div class="rounded-3xl p-6 border border-white/10 bg-gradient-to-br from-white/5 to-white/0">
+        <div class="text-2xl font-extrabold">Siap mulai?</div>
+        <p class="text-white/70 mt-2">Consult gratis untuk rekomendasi paket terbaik sesuai konsep server kamu.</p>
+        <a href="https://wa.me/6281263130957?text=Halo%2C%20minta%20rekomendasi%20paket%20hosting%20Minecraft" class="mt-5 inline-flex items-center gap-2 px-5 py-3 rounded-2xl bg-brand hover:bg-brand-600 shadow-glow font-semibold">Chat Admin di WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="mx-auto wrap px-4 py-12 md:py-16">
+    <div class="text-center mb-8">
+      <h2 class="text-3xl md:text-4xl font-extrabold">Pertanyaan umum</h2>
+      <p class="text-white/70 mt-2">Jawaban singkat yang sering ditanyakan.</p>
+    </div>
+    <div class="grid md:grid-cols-2 gap-5">
+      <details class="rounded-2xl border border-white/10 bg-white/5 p-5 open:shadow-soft">
+        <summary class="cursor-pointer font-semibold">Bagaimana proses setup?</summary>
+        <p class="text-white/70 mt-2">Setelah pembayaran, server aktif otomatis. Kamu akan menerima akses panel di email/WA.</p>
+      </details>
+      <details class="rounded-2xl border border-white/10 bg-white/5 p-5">
+        <summary class="cursor-pointer font-semibold">Bisa pindahan dari host lain?</summary>
+        <p class="text-white/70 mt-2">Bisa. Kami bantu migrasi file & database agar minim downtime.</p>
+      </details>
+      <details class="rounded-2xl border border-white/10 bg-white/5 p-5">
+        <summary class="cursor-pointer font-semibold">Java & Bedrock support?</summary>
+        <p class="text-white/70 mt-2">Ya, dukung keduanya. Untuk crossplay gunakan Geyser + Floodgate.</p>
+      </details>
+      <details class="rounded-2xl border border-white/10 bg-white/5 p-5">
+        <summary class="cursor-pointer font-semibold">Refund & garansi?</summary>
+        <p class="text-white/70 mt-2">Garansi layanan 3 hari untuk masalah dari sisi server. S&K berlaku.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="kontak" class="border-t border-white/10 bg-night-800/40">
+    <div class="mx-auto wrap px-4 py-10 grid md:grid-cols-4 gap-6">
+      <div>
+        <div class="flex items-center gap-3 mb-3">
+          <div class="w-9 h-9 rounded-xl bg-brand/20 border border-brand/40 grid place-content-center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 7h18M6 12h12M9 17h6" stroke="#A5B4FC" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+          <span class="font-extrabold tracking-tight">Arsya Hosting</span>
+        </div>
+        <p class="text-white/60 text-sm">Hosting Minecraft cepat dan stabil dengan dukungan lokal Indonesia.</p>
+      </div>
+      <div>
+        <div class="font-semibold mb-3">Navigasi</div>
+        <ul class="space-y-2 text-white/70 text-sm">
+          <li><a href="#fitur" class="hover:text-white">Fitur</a></li>
+          <li><a href="#pricing" class="hover:text-white">Paket</a></li>
+          <li><a href="#faq" class="hover:text-white">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="font-semibold mb-3">Layanan</div>
+        <ul class="space-y-2 text-white/70 text-sm">
+          <li>Panel Pterodactyl</li>
+          <li>DDoS Protection</li>
+          <li>Backup & Monitoring</li>
+        </ul>
+      </div>
+      <div>
+        <div class="font-semibold mb-3">Kontak</div>
+        <ul class="space-y-2 text-white/70 text-sm">
+          <li>WhatsApp: <a class="text-base-400 hover:text-base-300" href="https://wa.me/6281263130957">+62 812-6313-0957</a></li>
+          <li>Email: belum buat</li>
+          <li>Jakarta, Indonesia</li>
+        </ul>
+        <a href="https://wa.me/6281263130957?text=Halo%2C%20saya%20butuh%20bantuan%20hosting" class="mt-4 inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 border border-white/10">Buka WhatsApp</a>
+      </div>
+    </div>
+    <div class="mx-auto wrap px-4 pb-10 text-center text-white/50 text-xs">© <span id="y"></span> Arsya Hosting. Tidak berafiliasi dengan Mojang atau Microsoft.</div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear()
+  </script>
+</body>
+</html>
