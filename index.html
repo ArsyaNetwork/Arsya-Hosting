@@ -65,6 +65,23 @@
     .glass{backdrop-filter: blur(12px); background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02))}
     /* Simple container max width */
     .wrap{max-width:1200px}
+    /* Glow aktif saat hover / focus */
+    .paket-glow {
+      transition: box-shadow .25s ease, border-color .25s ease, transform .25s ease;
+    }
+    .paket-glow:hover,
+    .paket-glow:focus-within {
+      transform: translateY(-6px) scale(1.01);
+      border-color: #818CF8;        /* base-500 */
+      box-shadow:
+        0 0 0 1px rgba(129,140,248,.6),
+        0 12px 40px rgba(129,140,248,.35);
+    }
+    /* Label “Terpopuler” yang lebih kontras */
+    .label-populer {
+      background: linear-gradient(135deg, #A5B4FC 0%, #818CF8 100%);
+      color: #0B0C14;               /* night-900 agar putih tidak hilang di putih */
+    }
   </style>
 </head>
 <body class="bg-night-900 text-white">
@@ -126,7 +143,7 @@
       </div>
       <div class="relative">
         <div class="glass rounded-3xl p-4 md:p-6 border border-white/10 shadow-soft">
-          <img src="https://images6.alphacoders.com/456/thumb-1920-456498.jpg" alt="Minecraft server" class="rounded-2xl w-full h-64 md:h-96 object-cover"/>
+          <img src="https://cdn.pixabay.com/photo/2018/05/23/13/29/network-3424070_640.jpg" alt="Minecraft server" class="rounded-2xl w-full h-64 md:h-96 object-cover"/>
         </div>
         <div class="absolute -bottom-6 -right-4 md:-right-10 bg-brand/20 border border-brand/40 text-xs rounded-2xl p-3 backdrop-blur">
           <div class="font-bold">Ping <span class="text-emerald-300">rendah</span></div>
@@ -204,7 +221,7 @@
 
       <div class="grid md:grid-cols-3 gap-6">
   <!-- Paket 1 -->
-  <div class="shine float rounded-3xl border border-white/10 bg-white/5 p-6 flex flex-col">
+  <div class="paket-glow shine float rounded-3xl border border-white/10 bg-white/5 p-6 flex flex-col">
     <div class="text-sm text-white/60 mb-2">PAKET 1</div>
     <div class="text-3xl font-extrabold">Rp10.000<span class="text-base font-semibold text-white/60">/bln</span></div>
     <ul class="mt-4 space-y-2 text-white/80 text-sm">
@@ -217,23 +234,29 @@
     <a href="https://wa.me/6281263130957?text=Halo%2C%20saya%20mau%20order%20PAKET%201" class="mt-6 inline-flex items-center justify-center rounded-xl px-4 py-3 bg-white/10 hover:bg-white/20 border border-white/15">Order via WhatsApp</a>
   </div>
 
-  <!-- Paket 2 -->
-  <div class="shine float rounded-3xl border-2 border-brand bg-white/10 p-6 shadow-glow relative flex flex-col">
-    <div class="absolute -top-3 right-6 text-xs px-3 py-1 rounded-full bg-brand">Terpopuler</div>
-    <div class="text-sm text-white/80 mb-2">PAKET 2</div>
-    <div class="text-3xl font-extrabold">Rp20.000<span class="text-base font-semibold text-white/60">/bln</span></div>
-    <ul class="mt-4 space-y-2 text-white/90 text-sm">
-      <li>RAM 2GB</li>
-      <li>vCPU High Clock</li>
-      <li>Slot 20-30 pemain</li>
-      <li>Backup harian</li>
-      <li>DDoS protection</li>
-    </ul>
-    <a href="https://wa.me/6281263130957?text=Halo%2C%20saya%20mau%20order%20PAKET%202" class="mt-6 inline-flex items-center justify-center rounded-xl px-4 py-3 bg-brand hover:bg-brand-600 font-semibold shadow-glow">Pilih Paket 2</a>
+  <!-- Paket 2 (badge menimpa kotak) -->
+<div class="paket-glow shine float rounded-3xl border-2 border-brand bg-white/10 p-6 shadow-glow relative flex flex-col">
+  <!-- turun 3 px dari posisi semula -->
+  <div class="absolute top-2 right-6 text-xs px-3 py-1 rounded-full label-populer font-semibold shadow-lg">
+    Terpopuler
   </div>
 
+  <div class="text-sm text-white/80 mb-2">PAKET 2</div>
+  <div class="text-3xl font-extrabold">Rp20.000<span class="text-base font-semibold text-white/60">/bln</span></div>
+  <ul class="mt-4 space-y-2 text-white/90 text-sm">
+    <li>RAM 2GB</li>
+    <li>vCPU High Clock</li>
+    <li>Slot 20-30 pemain</li>
+    <li>Backup harian</li>
+    <li>DDoS protection</li>
+  </ul>
+  <a href="https://wa.me/6281263130957?text=Halo%2C%20saya%20mau%20order%20PAKET%202" class="mt-6 inline-flex items-center justify-center rounded-xl px-4 py-3 bg-brand hover:bg-brand-600 font-semibold shadow-glow">
+    Pilih Paket 2
+  </a>
+</div>
+
   <!-- Paket 3 -->
-  <div class="shine float rounded-3xl border border-white/10 bg-white/5 p-6 flex flex-col">
+  <div class="paket-glow shine float rounded-3xl border border-white/10 bg-white/5 p-6 flex flex-col">
     <div class="text-sm text-white/60 mb-2">PAKET 3</div>
     <div class="text-3xl font-extrabold">Rp40.000<span class="text-base font-semibold text-white/60">/bln</span></div>
     <ul class="mt-4 space-y-2 text-white/80 text-sm">
@@ -247,7 +270,7 @@
   </div>
 
   <!-- Paket 4 -->
-  <div class="shine float rounded-3xl border border-white/10 bg-white/5 p-6 flex flex-col">
+  <div class="paket-glow shine float rounded-3xl border border-white/10 bg-white/5 p-6 flex flex-col">
     <div class="text-sm text-white/60 mb-2">PAKET 4</div>
     <div class="text-3xl font-extrabold">Rp50.000<span class="text-base font-semibold text-white/60">/bln</span></div>
     <ul class="mt-4 space-y-2 text-white/80 text-sm">
@@ -261,7 +284,7 @@
   </div>
 
   <!-- Paket 5 -->
-  <div class="shine float rounded-3xl border border-white/10 bg-white/5 p-6 flex flex-col">
+  <div class="paket-glow shine float rounded-3xl border border-white/10 bg-white/5 p-6 flex flex-col">
     <div class="text-sm text-white/60 mb-2">PAKET 5</div>
     <div class="text-3xl font-extrabold">Rp60.000<span class="text-base font-semibold text-white/60">/bln</span></div>
     <ul class="mt-4 space-y-2 text-white/80 text-sm">
@@ -275,7 +298,7 @@
   </div>
 
   <!-- Paket 6 -->
-  <div class="shine float rounded-3xl border border-white/10 bg-white/5 p-6 flex flex-col">
+  <div class="paket-glow shine float rounded-3xl border border-white/10 bg-white/5 p-6 flex flex-col">
     <div class="text-sm text-white/60 mb-2">PAKET 6</div>
     <div class="text-3xl font-extrabold">Rp70.000<span class="text-base font-semibold text-white/60">/bln</span></div>
     <ul class="mt-4 space-y-2 text-white/80 text-sm">
@@ -289,7 +312,7 @@
   </div>
 
   <!-- Paket 7 -->
-  <div class="shine float rounded-3xl border border-white/10 bg-white/5 p-6 flex flex-col">
+  <div class="paket-glow shine float rounded-3xl border border-white/10 bg-white/5 p-6 flex flex-col">
     <div class="text-sm text-white/60 mb-2">PAKET 7</div>
     <div class="text-3xl font-extrabold">Rp80.000<span class="text-base font-semibold text-white/60">/bln</span></div>
     <ul class="mt-4 space-y-2 text-white/80 text-sm">
@@ -303,7 +326,7 @@
   </div>
 
   <!-- Paket 8 -->
-  <div class="shine float rounded-3xl border border-white/10 bg-white/5 p-6 flex flex-col">
+  <div class="paket-glow shine float rounded-3xl border border-white/10 bg-white/5 p-6 flex flex-col">
     <div class="text-sm text-white/60 mb-2">PAKET 8</div>
     <div class="text-3xl font-extrabold">Rp90.000<span class="text-base font-semibold text-white/60">/bln</span></div>
     <ul class="mt-4 space-y-2 text-white/80 text-sm">
@@ -317,7 +340,7 @@
   </div>
 
   <!-- Paket 9 -->
-  <div class="shine float rounded-3xl border border-white/10 bg-white/5 p-6 flex flex-col">
+  <div class="paket-glow shine float rounded-3xl border border-white/10 bg-white/5 p-6 flex flex-col">
     <div class="text-sm text-white/60 mb-2">PAKET 9</div>
     <div class="text-3xl font-extrabold">Rp100.000<span class="text-base font-semibold text-white/60">/bln</span></div>
     <ul class="mt-4 space-y-2 text-white/80 text-sm">
@@ -331,7 +354,7 @@
   </div>
 
   <!-- Paket 10 -->
-  <div class="shine float rounded-3xl border border-white/10 bg-white/5 p-6 flex flex-col">
+  <div class="paket-glow shine float rounded-3xl border border-white/10 bg-white/5 p-6 flex flex-col">
     <div class="text-sm text-white/60 mb-2">PAKET 10</div>
     <div class="text-3xl font-extrabold">Rp110.000<span class="text-base font-semibold text-white/60">/bln</span></div>
     <ul class="mt-4 space-y-2 text-white/80 text-sm">
