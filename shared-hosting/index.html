@@ -44,9 +44,6 @@
   </script>
   <style>
     body{font-family:'Inter',sans-serif}
-    .shine{position:relative;overflow:hidden}
-    .shine::after{content:"";position:absolute;inset:-150% -50% auto;transform:rotate(20deg);width:30%;height:300%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.25),transparent);transition:transform .6s ease}
-    .shine:hover::after{transform:translateX(350%) rotate(20deg)}
     .float{transition:transform .25s ease, box-shadow .25s ease}
     .float:hover{transform:translateY(-6px) scale(1.01); box-shadow:0 16px 40px rgba(0,0,0,.35)}
     .paket-glow{transition:box-shadow .25s ease,border-color .25s ease,transform .25s ease}
@@ -84,8 +81,11 @@
 
         <!-- Paket Basic -->
         <div class="paket-glow shine float rounded-3xl border border-white/10 bg-white/5 p-6 flex flex-col text-center">
+        <img src="https://cdn.mos.cms.futurecdn.net/qHFzGKFBz7kvxiVyjoe6JJ.jpg" alt="Rank VIP"
+       class="mx-auto mb-4 w-80 h-auto object-contain rounded-xl">
           <h2 class="text-xl font-bold mb-2">Hosting Basic</h2>
-          <p class="text-white/70 mb-6">Mulai Rp7.000/bulan, cocok untuk belajar & server kecil.</p>
+          <p class="text-white/70 mb-6">Ditopang oleh AMD EPYC™ Rome 7002 Series (7nm).
+Cocok untuk kebutuhan hosting ringan–menengah dengan performa stabil, dan harga yang ekonomis.</p>
           <a href="/shared-hosting/basic/" class="inline-flex items-center justify-center px-5 py-3 rounded-2xl bg-brand hover:bg-brand-600 font-semibold shadow-glow">Lihat Paket</a>
         </div>
 
@@ -100,6 +100,8 @@
 
         <!-- Paket Premium -->
         <div class="paket-glow shine float rounded-3xl border border-white/10 bg-white/5 p-6 flex flex-col text-center">
+        <img src="https://cdn.mos.cms.futurecdn.net/qHFzGKFBz7kvxiVyjoe6JJ.jpg" alt="Rank VIP"
+       class="mx-auto mb-4 w-80 h-auto object-contain rounded-xl">
           <h2 class="text-xl font-bold mb-2">Hosting Premium</h2>
           <p class="text-white/70 mb-6">Mulai Rp17.000/bulan, untuk server besar & kebutuhan serius.</p>
           <a href="/shared-hosting/premium/" class="inline-flex items-center justify-center px-5 py-3 rounded-2xl bg-brand hover:bg-brand-600 font-semibold shadow-glow">Lihat Paket</a>
