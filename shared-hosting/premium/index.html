@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+<head>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hosting Minecraft • Cepat, Stabil, Anti-Lag</title>
+  <meta name="description" content="Hosting server Minecraft cepat dan stabil. Panel mudah, DDoS protection, instant setup, dan support ramah 24/7." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <!-- Tailwind via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { inter: ['Inter', 'ui-sans-serif', 'system-ui'] },
+          colors: {
+            base: {
+              50: '#F8FAFF',
+              100: '#EEF2FF',
+              200: '#E0E7FF',
+              300: '#C7D2FE',
+              400: '#A5B4FC',
+              500: '#818CF8',
+              600: '#6366F1',
+              700: '#4F46E5',
+              800: '#4338CA',
+              900: '#312E81',
+            },
+            brand: {
+              DEFAULT: '#6D5EF4',
+              600: '#5C4EF0',
+              700: '#4E42E0',
+              800: '#3B33B8'
+            },
+            night: {
+              900: '#0B0C14',
+              800: '#111225',
+              700: '#151633',
+              600: '#1D1E3F'
+            }
+          },
+          boxShadow: {
+            soft: '0 10px 30px rgba(0,0,0,.25)',
+            glow: '0 0 0 1px rgba(109,94,244,.5), 0 12px 40px rgba(109,94,244,.35)'
+          },
+          backgroundImage: {
+            grid: 'radial-gradient(circle at 1px 1px, rgba(255,255,255,.06) 1px, transparent 0)'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body{font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif}
+    /* Float effect */
+    .float{transition:transform .25s ease, box-shadow .25s ease}
+    .float:hover{transform:translateY(-6px) scale(1.01); box-shadow:0 16px 40px rgba(0,0,0,.35)}
+    /* Glass */
+    .glass{backdrop-filter: blur(12px); background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02))}
+    /* Simple container max width */
+    .wrap{max-width:1200px}
+    /* Glow aktif saat hover / focus */
+    .paket-glow {
+      transition: box-shadow .25s ease, border-color .25s ease, transform .25s ease;
+    }
+    .paket-glow:hover,
+    .paket-glow:focus-within {
+      transform: translateY(-6px) scale(1.01);
+      border-color: #818CF8;        /* base-500 */
+      box-shadow:
+        0 0 0 1px rgba(129,140,248,.6),
+        0 12px 40px rgba(129,140,248,.35);
+    }
+    /* Label “Terpopuler” yang lebih kontras */
+    .label-populer {
+      background: linear-gradient(135deg, #A5B4FC 0%, #818CF8 100%);
+      color: #0B0C14;               /* night-900 agar putih tidak hilang di putih */
+    }
+  </style>
+
+  <title>Paket Premium Hosting</title>
+</head>
+<body class="bg-night-900 text-white">
+  <header class="relative overflow-hidden">
+    <div class="absolute inset-0 -z-10">
+      <div class="absolute inset-0 bg-gradient-to-b from-night-800 via-night-900 to-night-900"></div>
+      <div class="absolute inset-0 bg-grid bg-[length:22px_22px]"></div>
+      <div class="absolute -top-40 -right-40 w-[640px] h-[640px] rounded-full blur-3xl opacity-30" style="background:radial-gradient(closest-side,#6D5EF4,transparent)"></div>
+    </div>
+    <nav class="mx-auto wrap px-4 py-5 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-xl bg-brand/20 border border-brand/40 grid place-content-center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 7h18M6 12h12M9 17h6" stroke="#A5B4FC" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+        <span class="font-extrabold tracking-tight text-white/90">Arsya Net</span>
+      </div>
+      <div class="hidden md:flex items-center gap-8 text-white/80">
+        <a href="/" class="hover:text-white">Beranda</a>
+        <a href="/shared-hosting/" class="hover:text-white">Daftar Paket</a>
+        <a href="https://wa.me/6281263130957?text=Halo%20kak%2C%20saya%20mau%20tanya%20paket%20Premium" class="px-4 py-2 rounded-xl bg-brand hover:bg-brand-600 transition font-semibold">Chat WhatsApp</a>
+      </div>
+      <a href="/" class="md:hidden px-3 py-2 rounded-lg bg-white/10">Beranda</a>
+    </nav>
+
+    <div class="mx-auto wrap px-4 pt-6 pb-12 md:pt-10 md:pb-16 text-center">
+      <h1 class="text-4xl md:text-5xl font-extrabold">Paket Premium Hoting</h1>
+      <p class="text-white/70 mt-3">Ditenagai AMD EPYC™ Genoa 9004 Series (5nm, Zen 4).
+Performa kelas enterprise dengan dukungan DDR5 & PCIe Gen5, siap untuk workload berat seperti modpack besar, plugin & addon berat, hingga server skala besar dengan banyak fitur.</p>
+      <div class="mt-6">
+        <a href="https://wa.me/6281263130957?text=Halo%2C%20minta%20rekomendasi%20Premium" class="shine inline-flex items-center gap-2 px-5 py-3 rounded-2xl bg-brand shadow-glow font-semibold">Butuh Rekomendasi?</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="daftar" class="relative">
+    <div class="absolute inset-0 -z-10 bg-gradient-to-b from-night-800/60 to-night-900"></div>
+    <div class="mx-auto wrap px-4 py-12 md:py-16">
+      <div class="grid md:grid-cols-3 gap-6">
+
+      <div class="paket-glow shine float rounded-3xl border border-white/10 bg-white/5 p-6 flex flex-col">
+        
+        <div class="text-sm text-white/60 mb-2">Premium 1</div>
+        <div class="text-3xl font-extrabold">Rp7,000<span class='text-base font-semibold text-white/60'>/bln</span></div>
+        <ul class="mt-4 space-y-2 text-white/80 text-sm">
+          <li>✦ RAM 1GB</li>
+          <li>✦ 100%vCpu</li>
+          <li>✦ Disk 5GB</li>
+          <li>✦ Ekstra Port</li>
+          <li>✦ Weekly Backup</li>
+          <li>✦ DDoS protection</li>
+        </ul>
+        <a href="https://wa.me/6281263130957?text=Halo%2C%20mau%20order%20Premium%201" class="mt-6 inline-flex items-center justify-center rounded-xl px-4 py-3 bg-brand hover:bg-brand-600 font-semibold shadow-glow">
+          Order via WhatsApp
+        </a>
+        <a href="https://discord.gg/JJwu9tv7" class="mt-6 inline-flex items-center justify-center rounded-xl px-4 py-3 bg-brand hover:bg-brand-600 font-semibold shadow-glow">
+          Order via Discord
+        </a>
+      </div>
+
+
+      <div class="paket-glow shine float rounded-3xl border border-2 border-brand bg-white/10 shadow-glow relative p-6 flex flex-col">
+        
+  <div class="absolute top-2 right-6 text-xs px-3 py-1 rounded-full label-populer font-semibold shadow-lg">
+    Terpopuler
+  </div>
+
+        <div class="text-sm text-white/60 mb-2">Premium 2</div>
+        <div class="text-3xl font-extrabold">Rp12,000<span class='text-base font-semibold text-white/60'>/bln</span></div>
+        <ul class="mt-4 space-y-2 text-white/90 text-sm">
+          <li>✦ RAM 2GB</li>
+          <li>✦ 200%vCpu</li>
+          <li>✦ Disk 10GB</li>
+          <li>✦ Ekstra Port</li>
+          <li>✦ Weekly Backup</li>
+          <li>✦ DDoS protection</li>
+        </ul>
+        <a href="https://wa.me/6281263130957?text=Halo%2C%20mau%20order%20Premium%202" class="mt-6 inline-flex items-center justify-center rounded-xl px-4 py-3 bg-brand hover:bg-brand-600 font-semibold shadow-glow">
+          Order via WhatsApp
+        </a>
+        <a href="https://wa.me/6281263130957?text=Halo%2C%20mau%20order%20Basic%201" class="mt-6 inline-flex items-center justify-center rounded-xl px-4 py-3 bg-brand hover:bg-brand-600 font-semibold shadow-glow">
+          Order via Discord
+        </a>
+      </div>
+
+
+      <div class="paket-glow shine float rounded-3xl border border-white/10 bg-white/5 p-6 flex flex-col">
+        
+        <div class="text-sm text-white/60 mb-2">Premium 3</div>
+        <div class="text-3xl font-extrabold">Rp17,000<span class='text-base font-semibold text-white/60'>/bln</span></div>
+        <ul class="mt-4 space-y-2 text-white/80 text-sm">
+          <li>✦ RAM 3GB</li>
+          <li>✦ 200%vCpu</li>
+          <li>✦ Disk 15GB</li>
+          <li>✦ Ekstra Port</li>
+          <li>✦ Weekly Backup</li>
+          <li>✦ DDoS protection</li>
+        </ul>
+        <a href="https://wa.me/6281263130957?text=Halo%2C%20mau%20order%20Premium%203" class="mt-6 inline-flex items-center justify-center rounded-xl px-4 py-3 bg-brand hover:bg-brand-600 font-semibold shadow-glow">
+          Order via WhatsApp
+        </a>
+        <a href="https://wa.me/6281263130957?text=Halo%2C%20mau%20order%20Basic%201" class="mt-6 inline-flex items-center justify-center rounded-xl px-4 py-3 bg-brand hover:bg-brand-600 font-semibold shadow-glow">
+          Order via Discord
+        </a>
+      </div>
+
+
+      <div class="paket-glow shine float rounded-3xl border border-white/10 bg-white/5 p-6 flex flex-col">
+        
+        <div class="text-sm text-white/60 mb-2">Premium 4</div>
+        <div class="text-3xl font-extrabold">Rp22,000<span class='text-base font-semibold text-white/60'>/bln</span></div>
+        <ul class="mt-4 space-y-2 text-white/80 text-sm">
+          <li>✦ RAM 4GB</li>
+          <li>✦ 300%vCpu</li>
+          <li>✦ Disk 20GB</li>
+          <li>✦ Ekstra Port</li>
+          <li>✦ Weekly Backup</li>
+          <li>✦ DDoS protection</li>
+        </ul>
+        <a href="https://wa.me/6281263130957?text=Halo%2C%20mau%20order%20Premium%204" class="mt-6 inline-flex items-center justify-center rounded-xl px-4 py-3 bg-brand hover:bg-brand-600 font-semibold shadow-glow">
+          Order via WhatsApp
+        </a>
+        <a href="https://wa.me/6281263130957?text=Halo%2C%20mau%20order%20Basic%201" class="mt-6 inline-flex items-center justify-center rounded-xl px-4 py-3 bg-brand hover:bg-brand-600 font-semibold shadow-glow">
+          Order via Discord
+        </a>
+      </div>
+
+
+      <div class="paket-glow shine float rounded-3xl border border-white/10 bg-white/5 p-6 flex flex-col">
+        
+        <div class="text-sm text-white/60 mb-2">Premium 5</div>
+        <div class="text-3xl font-extrabold">Rp27,000<span class='text-base font-semibold text-white/60'>/bln</span></div>
+        <ul class="mt-4 space-y-2 text-white/80 text-sm">
+          <li>✦ RAM 5GB</li>
+          <li>✦ 300%vCpu</li>
+          <li>✦ Disk 25GB</li>
+          <li>✦ Ekstra Port</li>
+          <li>✦ Weekly Backup</li>
+          <li>✦ DDoS protection</li>
+        </ul>
+        <a href="https://wa.me/6281263130957?text=Halo%2C%20mau%20order%20Premium%205" class="mt-6 inline-flex items-center justify-center rounded-xl px-4 py-3 bg-brand hover:bg-brand-600 font-semibold shadow-glow">
+          Order via WhatsApp
+        </a>
+        <a href="https://wa.me/6281263130957?text=Halo%2C%20mau%20order%20Basic%201" class="mt-6 inline-flex items-center justify-center rounded-xl px-4 py-3 bg-brand hover:bg-brand-600 font-semibold shadow-glow">
+          Order via Discord
+        </a>
+      </div>
+
+
+      <div class="paket-glow shine float rounded-3xl border border-white/10 bg-white/5 p-6 flex flex-col">
+        
+        <div class="text-sm text-white/60 mb-2">Premium 6</div>
+        <div class="text-3xl font-extrabold">Rp32,000<span class='text-base font-semibold text-white/60'>/bln</span></div>
+        <ul class="mt-4 space-y-2 text-white/80 text-sm">
+          <li>✦ RAM 6GB</li>
+          <li>✦ 400%vCpu</li>
+          <li>✦ Disk 30GB</li>
+          <li>✦ Ekstra Port</li>
+          <li>✦ Weekly Backup</li>
+          <li>✦ DDoS protection</li>
+        </ul>
+        <a href="https://wa.me/6281263130957?text=Halo%2C%20mau%20order%20Premium%206" class="mt-6 inline-flex items-center justify-center rounded-xl px-4 py-3 bg-brand hover:bg-brand-600 font-semibold shadow-glow">
+          Order via WhatsApp
+        </a>
+        <a href="https://wa.me/6281263130957?text=Halo%2C%20mau%20order%20Basic%201" class="mt-6 inline-flex items-center justify-center rounded-xl px-4 py-3 bg-brand hover:bg-brand-600 font-semibold shadow-glow">
+          Order via Discord
+        </a>
+      </div>
+
+
+      <div class="paket-glow shine float rounded-3xl border border-white/10 bg-white/5 p-6 flex flex-col">
+        
+        <div class="text-sm text-white/60 mb-2">Premium 7</div>
+        <div class="text-3xl font-extrabold">Rp37,000<span class='text-base font-semibold text-white/60'>/bln</span></div>
+        <ul class="mt-4 space-y-2 text-white/80 text-sm">
+          <li>✦ RAM 7GB</li>
+          <li>✦ 400%vCpu</li>
+          <li>✦ Disk 35GB</li>
+          <li>✦ Ekstra Port</li>
+          <li>✦ Weekly Backup</li>
+          <li>✦ DDoS protection</li>
+        </ul>
+        <a href="https://wa.me/6281263130957?text=Halo%2C%20mau%20order%20Premium%207" class="mt-6 inline-flex items-center justify-center rounded-xl px-4 py-3 bg-brand hover:bg-brand-600 font-semibold shadow-glow">
+          Order via WhatsApp
+        </a>
+        <a href="https://wa.me/6281263130957?text=Halo%2C%20mau%20order%20Premium%201" class="mt-6 inline-flex items-center justify-center rounded-xl px-4 py-3 bg-brand hover:bg-brand-600 font-semibold shadow-glow">
+          Order via Discord
+        </a>
+      </div>
+
+
+      <div class="paket-glow shine float rounded-3xl border border-white/10 bg-white/5 p-6 flex flex-col">
+        
+        <div class="text-sm text-white/60 mb-2">Premium 8</div>
+        <div class="text-3xl font-extrabold">Rp42,000<span class='text-base font-semibold text-white/60'>/bln</span></div>
+        <ul class="mt-4 space-y-2 text-white/80 text-sm">
+          <li>✦ RAM 8GB</li>
+          <li>✦ 500%vCpu</li>
+          <li>✦ Disk 40GB</li>
+          <li>✦ Ekstra Port</li>
+          <li>✦ Weekly Backup</li>
+          <li>✦ DDoS protection</li>
+        </ul>
+        <a href="https://wa.me/6281263130957?text=Halo%2C%20mau%20order%20Premium%208" class="mt-6 inline-flex items-center justify-center rounded-xl px-4 py-3 bg-brand hover:bg-brand-600 font-semibold shadow-glow">
+          Order via WhatsApp
+        </a>
+        <a href="https://wa.me/6281263130957?text=Halo%2C%20mau%20order%20Basic%201" class="mt-6 inline-flex items-center justify-center rounded-xl px-4 py-3 bg-brand hover:bg-brand-600 font-semibold shadow-glow">
+          Order via Discord
+        </a>
+      </div>
+
+      </div>
+      <div class="mt-10 grid md:grid-cols-3 gap-4 text-sm">
+        <div class="glass rounded-2xl p-4 border border-white/10"><span class="font-semibold">Add-on:</span> Dedicated IP, Subdomain gratis, Snapshot, SFTP.</div>
+        <div class="glass rounded-2xl p-4 border border-white/10"><span class="font-semibold">Modpack:</span> Paper/Purpur, BDS, Forge/Fabric, Geyser, Floodgate.</div>
+        <div class="glass rounded-2xl p-4 border border-white/10"><span class="font-semibold">Cocok untuk:</span> SMP, Lifesteal, Factions, Skyblock, Minigames.</div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="border-t border-white/10 bg-night-800/40">
+    <div class="mx-auto wrap px-4 py-8 text-center text-white/60 text-sm">
+      © <span id="y"></span> Arsya Net — Halaman Paket Premium
+    </div>
+  </footer>
+
+  <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+</body>
+</html>
