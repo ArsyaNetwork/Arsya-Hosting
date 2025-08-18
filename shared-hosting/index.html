@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shared Hosting • Arsya Net</title>
+  <meta name="description" content="Pilih paket Shared Hosting sesuai kebutuhanmu: Basic, Advance, atau Premium." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <!-- Tailwind via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { inter: ['Inter', 'ui-sans-serif', 'system-ui'] },
+          colors: {
+            base: {
+              500: '#818CF8',
+            },
+            brand: {
+              DEFAULT: '#6D5EF4',
+              600: '#5C4EF0',
+              700: '#4E42E0',
+              800: '#3B33B8'
+            },
+            night: {
+              900: '#0B0C14',
+              800: '#111225',
+              700: '#151633',
+              600: '#1D1E3F'
+            }
+          },
+          boxShadow: {
+            glow: '0 0 0 1px rgba(109,94,244,.5), 0 12px 40px rgba(109,94,244,.35)'
+          },
+          backgroundImage: {
+            grid: 'radial-gradient(circle at 1px 1px, rgba(255,255,255,.06) 1px, transparent 0)'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body{font-family:'Inter',sans-serif}
+    .shine{position:relative;overflow:hidden}
+    .shine::after{content:"";position:absolute;inset:-150% -50% auto;transform:rotate(20deg);width:30%;height:300%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.25),transparent);transition:transform .6s ease}
+    .shine:hover::after{transform:translateX(350%) rotate(20deg)}
+    .float{transition:transform .25s ease, box-shadow .25s ease}
+    .float:hover{transform:translateY(-6px) scale(1.01); box-shadow:0 16px 40px rgba(0,0,0,.35)}
+    .paket-glow{transition:box-shadow .25s ease,border-color .25s ease,transform .25s ease}
+    .paket-glow:hover{transform:translateY(-6px) scale(1.01);border-color:#818CF8;box-shadow:0 0 0 1px rgba(129,140,248,.6),0 12px 40px rgba(129,140,248,.35)}
+  </style>
+</head>
+<body class="bg-night-900 text-white">
+  <header class="relative overflow-hidden">
+    <div class="absolute inset-0 -z-10">
+      <div class="absolute inset-0 bg-gradient-to-b from-night-800 via-night-900 to-night-900"></div>
+      <div class="absolute inset-0 bg-grid bg-[length:22px_22px]"></div>
+      <div class="absolute -top-40 -right-40 w-[640px] h-[640px] rounded-full blur-3xl opacity-30" style="background:radial-gradient(closest-side,#6D5EF4,transparent)"></div>
+    </div>
+    <nav class="mx-auto wrap px-4 py-5 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-xl bg-brand/20 border border-brand/40 grid place-content-center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 7h18M6 12h12M9 17h6" stroke="#A5B4FC" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+        <span class="font-extrabold tracking-tight text-white/90">Arsya Net</span>
+      </div>
+      <div class="hidden md:flex items-center gap-8 text-white/80">
+        <a href="/" class="hover:text-white">Beranda</a>
+      </div>
+      <a href="/" class="md:hidden px-3 py-2 rounded-lg bg-white/10">Beranda</a>
+    </nav>
+
+    <div class="mx-auto wrap px-4 pt-6 pb-12 md:pt-10 md:pb-16 text-center">
+      <h1 class="text-4xl md:text-5xl font-extrabold">Shared Hosting</h1>
+      <p class="text-white/70 mt-3">Pilih paket Shared Hosting sesuai kebutuhanmu</p>
+    </div>
+  </header>
+
+  <main id="daftar" class="relative">
+    <div class="absolute inset-0 -z-10 bg-gradient-to-b from-night-800/60 to-night-900"></div>
+    <div class="mx-auto wrap px-4 py-12 md:py-16">
+      <div class="grid md:grid-cols-3 gap-6">
+
+        <!-- Paket Basic -->
+        <div class="paket-glow shine float rounded-3xl border border-white/10 bg-white/5 p-6 flex flex-col text-center">
+          <h2 class="text-xl font-bold mb-2">Hosting Basic</h2>
+          <p class="text-white/70 mb-6">Mulai Rp7.000/bulan, cocok untuk belajar & server kecil.</p>
+          <a href="/shared-hosting/basic/" class="inline-flex items-center justify-center px-5 py-3 rounded-2xl bg-brand hover:bg-brand-600 font-semibold shadow-glow">Lihat Paket</a>
+        </div>
+
+        <!-- Paket Advance -->
+        <div class="paket-glow shine float rounded-3xl border border-white/10 bg-white/5 p-6 flex flex-col text-center">
+        <img src="https://cdn.mos.cms.futurecdn.net/qHFzGKFBz7kvxiVyjoe6JJ.jpg" alt="Rank VIP"
+       class="mx-auto mb-4 w-80 h-auto object-contain rounded-xl">
+          <h2 class="text-xl font-bold mb-2">Hosting Advance</h2>
+          <p class="text-white/70 mb-6">Mulai Rp12.000/bulan, cocok untuk komunitas & SMP ramai.</p>
+          <a href="/shared-hosting/advance/" class="inline-flex items-center justify-center px-5 py-3 rounded-2xl bg-brand hover:bg-brand-600 font-semibold shadow-glow">Lihat Paket</a>
+        </div>
+
+        <!-- Paket Premium -->
+        <div class="paket-glow shine float rounded-3xl border border-white/10 bg-white/5 p-6 flex flex-col text-center">
+          <h2 class="text-xl font-bold mb-2">Hosting Premium</h2>
+          <p class="text-white/70 mb-6">Mulai Rp17.000/bulan, untuk server besar & kebutuhan serius.</p>
+          <a href="/shared-hosting/premium/" class="inline-flex items-center justify-center px-5 py-3 rounded-2xl bg-brand hover:bg-brand-600 font-semibold shadow-glow">Lihat Paket</a>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="border-t border-white/10 bg-night-800/40">
+    <div class="mx-auto wrap px-4 py-8 text-center text-white/60 text-sm">
+      © <span id="y"></span> Arsya Net — Shared Hosting
+    </div>
+  </footer>
+
+  <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+</body>
+</html>
