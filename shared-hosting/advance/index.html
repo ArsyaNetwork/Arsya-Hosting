@@ -397,6 +397,30 @@
     </div>
   </footer>
 
+  <script>
+  // Tahun otomatis
+  document.getElementById('y').textContent = new Date().getFullYear()
+
+  // ===== Anti Save As & View Source =====
+  // Blokir klik kanan
+  document.addEventListener('contextmenu', event => event.preventDefault());
+
+  // Blokir shortcut seperti Ctrl+S, Ctrl+U, F12
+  document.addEventListener('keydown', event => {
+    if (
+      (event.ctrlKey && ['s', 'u', 'c', 'p'].includes(event.key.toLowerCase())) || // Ctrl+S, Ctrl+U, Ctrl+C, Ctrl+P
+      event.key === 'F12' || 
+      (event.ctrlKey && event.shiftKey && event.key.toLowerCase() === 'i') // Ctrl+Shift+I
+    ) {
+      event.preventDefault();
+      alert('Fitur ini dinonaktifkan untuk keamanan konten.');
+    }
+  });
+
+  // (Opsional) Cegah drag gambar
+  document.addEventListener('dragstart', event => event.preventDefault());
+</script>
+  
   <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
 </body>
 </html>
